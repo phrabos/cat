@@ -1,0 +1,77 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore output directories and files
+dist/
+build/
+
+# Ignore environment-specific files
+.env
+
+# Ignore logs and databases
+*.log
+*.sqlite
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore dependencies and lock files
+package-lock.json
+yarn.lock
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore TypeScript configuration files
+tsconfig.json
+tsconfig.tsbuildinfo
+
+# Ignore compiled JavaScript files
+*.js
+*.js.map
+
+# Ignore editor-specific files
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.suo
+*.ntvs*
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore test and coverage directories
+test/
+coverage/
+
+# Ignore compiled binaries
+*.dll
+*.exe
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore yarn log
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore logs and databases
+*.log
+*.sqlite
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Ignore .env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore .DS_Store files on macOS
+.DS_Store
