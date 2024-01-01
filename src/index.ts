@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-import { validateInput, read } from './utils';
-import type { Commands } from './utils';
+import { read, write, backup } from './utils';
+import { validateInput } from './utils/validate';
+import type { Commands } from './utils/validate';
 
 const args = process.argv;
 const inputCommand = args[2] as keyof Commands;
 const inputFilePath = args[3];
 const scriptPath = process.cwd();
-
-console.log('args ->', args);
-console.log('cwd ->', scriptPath);
 
 const isInputValid = validateInput({
   inputCommand,
@@ -29,5 +27,10 @@ switch (inputCommand) {
     break;
   case 'write':
     console.log('command is write');
+    write(inputFilePath);
+    break;
+  case 'backup':
+    console.log('command is backup');
+    backup(inputFilePath);
     break;
 }
