@@ -3,15 +3,13 @@
 import { validateInput, read } from './utils';
 import type { Commands } from './utils';
 
-// const readFilePath = path.join(__dirname, '../input.txt');
-// const writeFilePath = path.join(__dirname, '../output.txt');
-
 const args = process.argv;
 const inputCommand = args[2] as keyof Commands;
 const inputFilePath = args[3];
-const scriptPath = args[1];
+const scriptPath = process.cwd();
 
 console.log('args ->', args);
+console.log('cwd ->', scriptPath);
 
 const isInputValid = validateInput({
   inputCommand,
@@ -33,12 +31,3 @@ switch (inputCommand) {
     console.log('command is write');
     break;
 }
-
-// const rl = readline.createInterface({
-//   input: readStream,
-//   output: writeStream,
-// });
-
-// rl.on('line', (line) => {
-//   console.log('line ->', line);
-// })

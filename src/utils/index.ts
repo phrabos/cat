@@ -37,8 +37,7 @@ export const validateInput = ({ inputCommand, inputFilePath, scriptPath, numArgs
     return false;
   }
 
-  const pathWithouFilename = scriptPath.split('/').slice(0, -2).join('/');
-  const pathToValidate = path.join(pathWithouFilename, inputFilePath);
+  const pathToValidate = path.join(scriptPath, inputFilePath);
   const isValidPath = fs.existsSync(pathToValidate);
   if (!isValidPath) {
     console.log('invalid path to file', pathToValidate);
